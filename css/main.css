@@ -1,0 +1,906 @@
+/* ========== FONTS ========== */
+
+@font-face {
+	font-family: 'Nexa Bold';
+	src: url('fonts/NexaBold.otf'); }
+@font-face {
+	font-family: 'Nexa Light';
+	src: url('fonts/NexaLight.otf'); }
+
+/* ========== GENERAL ========== */
+
+html{
+	font-family: 'Nexa Light';
+}
+
+body{
+
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+#center-text p{
+	text-align: center;
+}
+
+.logo-center{
+	width: 220%;
+	margin-left: -59%;
+}
+
+.clearfix {
+  overflow: auto;
+	clear:both;
+}
+
+.toggle{
+	display: none;
+	z-index: 10000;
+	left:50%;
+	transform: translateX(-50%);
+	position: fixed;
+}
+
+div.toggler div {
+	display:none;
+}
+
+div.toggler{
+	background:lightblue;
+	cursor:pointer;
+}
+
+.model-text{
+	display: none;
+	text-align: center;
+	float: right;
+	padding-right: 7%;
+}
+
+.red-highlight{
+	font-family: 'Nexa Bold';
+	color: #CC5B4E;
+}
+
+.blue-highlight{
+	font-family: 'Nexa Bold';
+	color: #57AADF;
+}
+
+.yellow-highlight{
+	font-family: 'Nexa Bold';
+	color: #F6AE37;
+}
+
+.story-text{
+	width: 75%;
+	font-size: 15pt;
+	text-align: center;
+	margin: auto;
+}
+
+.floorplan{
+	height: 55%;
+	width: auto;
+	margin-left: 25%;
+	margin-bottom: -10%;
+	-ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+
+@media only screen and (min-width : 700px){
+
+
+
+}
+
+@media only screen and (min-width : 900px){
+	.model-text{
+		display: block;
+		font-size: 150%;
+		width: 42%;
+		line-height: 140%;
+	}
+
+	.story-text{
+		width: 35%;
+		margin: auto;
+		margin-left: 35%;
+		padding: 2%;
+		font-size: 35pt;
+		text-align: center;
+		margin-top: -3%;
+		position: relative;
+		background-color: white;
+		border: 5px solid black;
+	}
+
+	.floorplan{
+		width: 35%;
+		height: auto;
+		margin-top: -20%;
+		padding-right: 30%;
+		position: absolute;
+	}
+}
+
+.arrow-dwn{
+	padding-bottom: 1%;
+	display: inline-block;
+}
+
+/* =========== FORM ============ */
+
+/* Basic Grey */
+.basic-grey {
+    width: 100%;
+    background: #F7F7F7;
+    padding: 25px 15px 25px 10px;
+    font-size: 15px;
+    color: #888;
+    text-shadow: 1px 1px 1px #FFF;
+    border:1px solid #E4E4E4;
+}
+.basic-grey h1 {
+    font-size: 25px;
+    padding: 0px 0px 10px 40px;
+    display: block;
+    border-bottom:1px solid #E4E4E4;
+    margin: -10px -15px 30px -10px;;
+    color: #888;
+}
+.basic-grey h1>span {
+    display: block;
+    font-size: 11px;
+}
+.basic-grey label {
+    display: block;
+    margin: 0px;
+}
+.basic-grey label>span {
+    float: left;
+    width: 20%;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 10px;
+    color: #888;
+}
+.basic-grey input[type="text"], .basic-grey input[type="email"], .basic-grey textarea, .basic-grey select {
+    border: 1px solid #DADADA;
+    color: #888;
+    height: 30px;
+    margin-bottom: 16px;
+    margin-right: 6px;
+    margin-top: 2px;
+    outline: 0 none;
+    padding: 3px 3px 3px 5px;
+    width: 70%;
+    font-size: 12px;
+    line-height:15px;
+    box-shadow: inset 0px 1px 4px #ECECEC;
+    -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+    -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}
+.basic-grey textarea{
+    padding: 5px 3px 3px 5px;
+}
+.basic-grey select {
+    background: #FFF url('down-arrow.png') no-repeat right;
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    width: 70%;
+    height: 35px;
+    line-height: 25px;
+}
+.basic-grey textarea{
+    height:100px;
+}
+.basic-grey .button {
+    background: #CC5B4E;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #FFF;
+    box-shadow: 1px 1px 5px #B6B6B6;
+    border-radius: 3px;
+    text-shadow: 1px 1px 1px #9E3F3F;
+    cursor: pointer;
+}
+.basic-grey .button:hover {
+    background: #E27575;
+}
+
+/* ========= TRIANGLE ========== */
+
+#triangle-wrapper{
+	text-align:center;
+}
+
+#triangle{
+	display: inline-block;
+	padding-bottom: 15%;
+}
+.top{
+	width: 26%;
+	height: auto;
+}
+
+.middle{
+	width: 50%;
+	height: auto;
+	margin-top: -1%;
+}
+
+.bottom{
+	width: 70%;
+	height: auto;
+	padding-top: 3%;
+}
+
+.inner-triangle-text{
+	font-family: 'Nexa Bold';
+	color: #ffffff;
+	position: relative;
+}
+
+.top-text{
+	margin-top: -11%;
+	font-size: 5pt;
+}
+
+.middle-text{
+	margin-top: -17%;
+	font-size: 7pt;
+}
+
+.bottom-text{
+	margin-top: -13%;
+	font-size: 10pt
+}
+
+@media only screen and (min-width : 700px){
+	#triangle{
+		width: 70%;
+	}
+
+	.top-text{
+		margin-top: -9%;
+		font-size: 11pt;
+	}
+
+	.middle-text{
+		margin-top: -14%;
+		font-size: 13pt;
+	}
+
+	.bottom-text{
+		margin-top: -13%;
+		font-size: 23pt
+	}
+}
+
+@media only screen and (min-width : 900px){
+	#triangle{
+		width: 45%;
+		float: left;
+	}
+
+	.top-text{
+		margin-top: -7%;
+		font-size: 17pt;
+	}
+
+	.middle-text{
+		margin-top: -12%;
+		font-size: 23pt;
+	}
+
+	.bottom-text{
+		margin-top: -13%;
+		font-size: 33pt
+	}
+}
+
+
+
+/* ========= ROADMAPS =========== */
+
+.roadmap{
+	width: 60%;
+	height: auto;
+	margin: auto;
+	display: table-cell;
+	padding-bottom: 6%;
+}
+
+.roadmap-text{
+	margin: auto;
+	text-align: center;
+	font-size: 11pt;
+	line-height: 115%;
+	width: 77%;
+	padding-bottom: 6%;
+}
+
+.title2{
+	margin-top: 90px;
+	margin-bottom: 10% !important;
+}
+
+@media only screen and (min-width : 700px){
+	.roadmap-text{
+		width: 45%;
+		font-size: 14pt;
+		line-height: 120%;
+	}
+
+	.roadmap{
+		width: 40%;
+	}
+}
+
+@media only screen and (min-width : 900px){
+	.roadmap-text{
+		width: 40%;
+		font-size: 16pt;
+		line-height: 130%;
+	}
+
+	.roadmap{
+		width: 25%;
+	}
+}
+
+/* ========== CIRCLES ========= */
+/*
+.circle-container{
+	width: 80%;
+}
+
+.circle-blue{
+	background-image: url('images/circle-blue.png');
+	background-size: 50%;
+	background-repeat: no-repeat;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 30%;
+	height: 30%;
+	z-index: 10000;
+	visibility: visible;
+}
+
+.circle-red{
+	background-image: url('images/circle-red.png');
+	background-size: 45%;
+	background-repeat: no-repeat;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 30%;
+	height: 30%;
+	z-index: 10000;
+	visibility: visible;
+}
+
+.circle-yellow{
+	background-image: url('images/circle-yellow.png');
+	background-size: 50%;
+	background-repeat: no-repeat;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 30%;
+	height: 30%;
+	z-index: 10000;
+	visibility: visible;
+}
+
+/* RED
+.circle-students{
+	margin-left: 10%;
+	margin-top: 40%;
+}
+
+/* BLUE
+.circle-community{
+	margin-right: 17%;
+	margin-bottom: 8%;
+}
+
+/* YELLOW
+.circle-proffesionals{
+	margin-right: 10%;
+	margin-top: 38%;
+}
+
+.circle-proffesionals p{
+	font-family: 'Nexa Bold';
+	font-size: 8pt;
+	text-align: center;
+	margin-left: 60%;
+	margin-top: 20%;
+}
+
+.circle-students p{
+	font-family: 'Nexa Bold';
+	font-size: 8pt;
+	text-align: center;
+	margin-left: 60%;
+}
+
+.circle-community p{
+	font-family: 'Nexa Bold';
+	font-size: 8pt;
+	text-align: center;
+	margin-left: 60%;
+	margin-top: 15%;
+}
+
+.circle-sm{
+	height: 27% !important;
+	width: 27% !important;
+	z-index: 1 !important;
+}
+
+.circle-lg{
+	height: 50% !important;
+	width: 50% !important;
+	z-index: 1 !important;
+}
+
+.circle-left{
+	margin-left: 8%;
+}
+
+.circle-right{
+	margin-right: 5%;
+}
+
+.circle-red.circle-sm.circle-left{
+	margin-top: 16%;
+	margin-left: 16%;
+}
+
+.circle-red.circle-sm.circle-right{
+	margin-bottom: 5%;
+	margin-right: 28%;
+}
+
+.circle-red.circle-lg{
+	margin-bottom: -15%;
+	margin-left: 10%;
+}
+
+.circle-blue.circle-lg{
+	margin-bottom: -25%;
+	margin-right: 0;
+}
+
+.circle-yellow.circle-lg{
+	margin-top: 110%;
+}
+
+.circle-blue.circle-sm.circle-left{
+	margin-bottom: 17%;
+	margin-left: 23%;
+}
+
+.circle-yellow.circle-sm.circle-right{
+	margin-top: 10%;
+	margin-right: 15%;
+}*/
+
+/* ========== NAVBAR ========== */
+
+.navbar{
+	width:100%;
+	position:fixed;
+	top: 0;
+	background-color: white;
+	opacity: 0.9;
+	z-index: 99999;
+}
+
+li{
+	display:inline-block;
+	padding:0px 0%;
+	overflow:auto;
+	float:right;
+	margin-right: 20px;
+}
+
+.social-ico{
+	height: 15px;
+}
+
+.logo{
+	font-family: 'nexa bold';
+	font-size: 21pt;
+	float: left;
+	padding-left: 3%;
+ }
+
+/* ========== LOOPED IN BUTTON ========== */
+
+#loop{
+	font-size: 4pt;
+	outline-color: black;
+	outline-style: solid;
+	outline-width: 2px;
+	width:27.3%;
+	margin: 0px auto;
+	text-align: center;
+}
+
+#loop:hover{
+	/*outline-color: #cc5b4e;*/
+	outline-style: dashed;
+}
+
+#loop p{
+	font-size: 3em;
+	padding: 5.7%;
+}
+
+#loop p:hover{
+	/*font-family: 'Nexa Bold';*/
+}
+
+/* ========== TWITTER SCROLLER ==========*/
+
+.twitter-container{
+	border-top: solid #D3D3D3 3px;
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+	height: 7%;
+}
+
+.user{
+	color: #57AADF;
+	font-size: 8pt;
+}
+
+.tweet{
+	text-align: center;
+	font-size: 8pt;
+}
+
+/* ========== SECTIONS ==========*/
+
+.section-title{
+	font-family: 'Nexa Bold';
+	color: #cc5b4e;
+	text-align: center;
+	font-size: 18pt;
+	margin-bottom: 85%;
+}
+
+.section1-background{
+	background-image: none;
+}
+
+.section2-background{
+	background-image: none;
+}
+
+.section3-background{
+	background-image: none;
+}
+
+
+@media only screen and (min-width : 700px){
+	.section-title{
+		font-size: 24pt;
+		margin-bottom: 70%
+	}
+
+	.section1-background{
+		background-image: url("images/story-background.jpg");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+
+	.section2-background{
+		background-image: url("images/roadmap-background.jpg");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+
+	.section3-background{
+		background-image: url("images/people-background.jpg");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+}
+
+@media only screen and (min-width : 900px){
+	.section-title{
+		font-size: 35pt;
+		margin-bottom: 25%;
+	}
+}
+/* ========== Boxes ==========*/
+
+.box{
+	border: 2px black solid;
+	background-color: white;
+	width: 57%;
+	height: auto;
+	padding: 3%;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	visibility: visible;
+	display: table;
+	z-index: 5;
+	margin-top: 45%;
+}
+
+.box-text{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 110%;
+	line-height: 120%;
+}
+
+.box2{
+	border: 2px black solid;
+	background-color: white;
+	width: 57%;
+	height: auto;
+	padding: 3%;
+	margin: auto;
+	position: relative;
+	z-index: 10000;
+}
+
+.model-box{
+	border: 2px black solid;
+	background-color: white;
+	padding: 3%;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+
+@media only screen and (min-width : 700px){
+	.box{
+		margin-top: 40%;
+		width: 45%;
+	}
+
+	.box2{
+		width: 45%;
+	}
+
+	.box-text{
+		font-size: 130%;
+		line-height: 130%;
+	}
+
+
+}
+
+@media only screen and (min-width : 900px){
+	.box{
+		margin-top: 23%;
+		width: 35%;
+	}
+
+	.box2{
+		width: 35%;
+	}
+
+	.box-text{
+		font-size: 140%;
+		line-height: 140%;
+	}
+
+	.model-box{
+		position: relative;
+		float: right;
+		display: block;
+		width: 35%;
+		margin-left: 0;
+		margin-right: 8%;
+		margin-top: 5%;
+		}
+	}
+}
+
+/* ========== NON-MOBILE BREAKPOINTS ==========*/
+
+/* First Design Breakpoint */
+/* Small Screens (Small Tablets. Big Phones) */
+@media only screen and (min-width : 650px){
+
+	/* ========== NAV DOTS ========== */
+
+	.nav-dots {
+		display: none;
+		position: fixed;
+		top: 10%;
+		width: 5%;
+		z-index: 100;
+	}
+
+	.dot {
+		height: 12px;
+		width: 12px;
+		margin: 35%;
+		border-radius: 20px;
+		background-color: #cccccc;
+	}
+
+	.dot.active {
+	 background-color: #CC5B4E;
+	}
+
+	/* ============================= */
+
+	.social-ico{
+		height: 20px;
+	}
+
+	.logo{
+		font-size: 26pt;
+	}
+
+	li{
+		margin-right: 30px;
+	}
+
+	.logo-center{
+		width: 160%;
+		margin-left: -31%;
+	}
+
+	#loop p{
+		font-size: 4em;
+		padding: 5.7%;
+	}
+
+	#center-text p{
+		font-size: 14pt;
+		width: 55%;
+		padding-left: 20%;
+	}
+
+	.twitter-container{
+		border-top: solid #D3D3D3 5px;
+	}
+
+	.user{
+		font-size: 14pt;
+	}
+
+	.tweet{
+		font-size: 14pt;
+	}
+
+}
+
+/* Second Design Breakpoint */
+/* Small Screens (Medum Tablets) */
+@media only screen and (min-width : 900px){
+
+	.logo-center{
+		width: 200%;
+		margin-left: -49%;
+	}
+
+	.social-ico{
+		height: 25px;
+	}
+
+	.logo{
+		font-size: 30pt;
+	}
+
+	li{
+		margin-right: 40px;
+	}
+
+	#loop p{
+		font-size: 16pt;
+	}
+
+}
+
+/* Third Design Breakpoint */
+/* Small Screens (Large Tablets) */
+@media only screen and (min-width : 1200px){
+
+	li{
+		margin-right: 40px;
+	}
+
+	#center-text p{
+		width: 50%;
+		padding-left: 25%;
+		font-size: 17pt;
+	}
+
+	#loop{
+		width: 25%;
+	}
+
+	#loop p{
+		font-size: 17pt;
+	}
+
+	.logo-center{
+		width: 100%;
+		margin: 0%;
+		overflow: visible;
+		padding-top: 7%;
+	}
+
+}
+
+/* Fourth Design Breakpoint */
+/* Medium Screens */
+@media only screen and (min-width : 1800px){
+
+	li{
+		margin-right: 50px;
+	}
+
+	.dot{
+		margin: 10%;
+	}
+
+	#center-text p{
+		width: 43%;
+		padding-left: 28%;
+	}
+
+	.logo-center{
+		padding-top: 2%;
+	}
+
+	#loop{
+		width: 15%;
+	}
+
+	.user{
+		font-size: 17pt;
+	}
+
+	.tweet{
+		font-size: 17pt;
+	}
+
+
+}
+
+
+/* Fifth Design Breakpoint (If needed)
+@media only screen and (min-width : 2200px){
+
+	li{
+		margin-right: 100px;
+	}
+}
+*/

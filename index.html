@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>CitizenCity</title>
+		<link rel="shortcut icon" href="http://citizencity.org/favicon.gif" />
+
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+
+		<script type="text/javascript" src="js/jquery.blockUI.js"></script>
+
+		<script type="text/javascript" src="js/scrollreveal.min.js"></script>
+
+		<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+
+		<script>
+			$(document).ready(function() {
+		    $('#fullpage').fullpage({
+					css3: true,
+					anchors: ['firstPage', '2ndPage', '3rdPage', '4thPage', 'lastPage'],
+					menu: '#menu',
+					autoScrolling: false,
+					fitToSection: false,
+					afterRender: function(){
+					    window.sr = ScrollReveal({reset: true, viewFactor: 0.85});
+					},
+					afterLoad: function(anchorLink, index){
+						//hide nav dots for main page
+					  if(index == 1){
+					    $('.nav-dots').hide();
+					  }
+					  //unhide nav dots for all other pages
+					  if(index != 1){
+					    $('.nav-dots').show();
+					  }
+						/*
+						//OUR BELIEF
+					  if(index == 2){
+					    sr.reveal('.box');
+					  }
+
+					  //OUR STORY
+					  if(index == 3){
+							//$.fn.fullpage.setAutoScrolling(false);
+							sr.reveal('.box2', {viewFactor: 0.15});
+							sr.reveal('.big-circle', {scale: 1.7})
+							sr.reveal('.inner-circle', {delay: 200})
+					    //sr.reveal('.circle-right', {delay: 200});
+					    //sr.reveal('.circle-center', {delay: 400});
+					    //sr.reveal('.circle-left', {delay: 600});
+					  }
+
+						if(index != 3){
+							//$.fn.fullpage.setAutoScrolling(true);
+						}
+
+					  //OUR ROADMAP
+					  if(index == 4){
+					    //$.fn.fullpage.setAutoScrolling(false);
+					    sr.reveal('.roadmap');
+							//disappear faster!
+					    sr.reveal('.roadmap-text');
+					  }
+
+						if(index != 4){
+							//$.fn.fullpage.setAutoScrolling(true);
+						}
+
+					  //OUR MODEL
+					  if(index == 5){
+
+					  }
+
+					  //OUR PEOPLE
+					  if(index == 6){
+
+					  }
+						*/
+					}
+				});
+			});
+
+			function down(){
+				$.fn.fullpage.moveSectionDown();
+			}
+
+			$.fn.center = function () {
+		    this.css("position","absolute");
+		    this.css("top", ( $(window).height() - this.height() ) / $(window).scrollTop() + "px");
+		    this.css("left", ( $(window).width() - this.width() ) / $(window).scrollLeft() + "px");
+		    return this;
+			}
+
+
+
+			$(document).ready(function() {
+    $('#loop').click(function() {
+        $.blockUI({ message: $('#email-form') });
+				$('.blockUI.blockMsg').center();
+        $('.blockOverlay').click($.unblockUI);
+    });
+});
+
+
+		$(document).ready(function () {
+			$('#top-toggle').on("mouseover", function () {
+  			$('#model-box-text').html('CitizenCity is a resource local community. Our facility will provide space, resources and a values-based community to support the needs of our neighbors.');
+				$('#blue-highlight').addClass('blue-highlight');
+				$('#yellow-highlight').removeClass('yellow-highlight');
+				$('#red-highlight').removeClass('red-highlight');
+			});
+
+			$('#middle-toggle').on("mouseover", function () {
+  			$('#model-box-text').html('We offer space and programs for faculty members engaged in socially conscious research and students aspiring to mission-driven careers.');
+				$('#blue-highlight').removeClass('blue-highlight');
+				$('#yellow-highlight').addClass('yellow-highlight');
+				$('#red-highlight').removeClass('red-highlight');
+			});
+
+			$('#bottom-toggle').on("mouseover", function () {
+  			$('#model-box-text').html('We\'re a coworking space for mission-driven professionals that offers the workspace, resources and a diverse community of colleagues for our members to grow and thrive.');
+				$('#blue-highlight').removeClass('blue-highlight');
+				$('#yellow-highlight').removeClass('yellow-highlight');
+				$('#red-highlight').addClass('red-highlight');
+			});
+		});
+
+
+		</script>
+		<meta name="description" content="CitizenCity seeks to be Pittsburgh’s only coworking space dedicated to
+		providing collaborative space, resources and community to our city’s mission-driven professionals, organizations and companies." />
+		<meta name="keywords" content="CitizenCity,Citizen City,Pittsburgh,Pennsylvania,Pittsburgh PA" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+
+	<body lang="en">
+		<div class="navbar">
+			<nav>
+					<div class="logo"> <a href="#firstPage"> CITIZENCITY </a> </div>
+					<ul>
+						<!--<li><a href="#"><img class="social-ico" src="images/instagram.png"></a></li>-->
+						<li><a href="https://www.facebook.com/citizencitypgh/" target="_blank"><img class="social-ico" src="images/facebook.png"></a></li>
+						<li><a href="https://twitter.com/citizencitypgh" target="_blank"><img class="social-ico" src="images/twitter.png"></a></li>
+						<!--<li><a href="#"><img class="social-ico" src="images/calendar.png"></a></li>-->
+					</ul>
+			</nav>
+		</div>
+
+		<div id="menu" class="nav-dots">
+			<a href="#2ndPage"><div data-menuanchor="2ndPage" class="navdot dot"></div></a>
+			<a href="#3rdPage"><div data-menuanchor="3rdPage" class="navdot dot"></div></a>
+			<a href="#4thPage"><div data-menuanchor="4thPage" class="navdot dot"></div></a>
+			<a href="#lastPage"><div data-menuanchor="lastPage" class="navdot dot"></div></a>
+		</div>
+
+		<div id="fullpage" class="fullpage-wrapper">
+			<section class="section" id="section0" style="text-align: center; overflow:hidden;">
+					<img class="logo-center" src="images/front-img.png">
+					<div id="center-text"><p>forges collaborative space and common ground for people commited to making a social impact.</p></div>
+					<a class="togglelink"><div id="loop"><p>get looped in</p></div></a>
+					<div class="toggle" id="toggle">
+
+						<form action="" class="basic-grey" id="email-form">
+							<label> Email: </label>
+						  <input type="email" name="email">
+						  <label> First name: </label>
+						  <input type="text" name="firstname">
+						  <label> Last name: </label>
+						  <input type="text" name="lastname"><br>
+							<label> I am a...</label>
+							<select>
+								<option value="prof"> Professional </option>
+								<option value="stu"> Student </option>
+								<option value="faculty"> University Faculty/ Administrator </option>
+								<option value="other"> Other </option>
+							</select><br>
+							<label>Organization/ Business/ University Affiliation:</label>
+						  <input type="text" name="org"><br>
+							<input class="button" type="submit">
+						</form>
+					</div>
+
+					<img class="arrow-dwn" onclick="down()" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABEklEQVRYR+2V7Q0BQRRFz3agBRXYEqiAEuhMB6ICOkAHOkAF5MqMTDa7O2+//ZhNNsEy57z73oyMia9sYj5JICXwFwlsgau7x9wUOZArgT2wBubAcyQDwU/A0bdAEgtgNYLEzMFvwDacAbXhPbCEh7+ApdIOBfTwPKCEh4sp+LfdxV0wlEQpvExAn/UtUQmvEuhTohZeJ9CHRBQeE+giYYJbBEKJh9uilrNKu0kSv2mv+pH1v8AP5gXYRQx0qOmki8KtCXieFlVlhxoJwTdO4G6JypqARcLDVblOVdPVVECLliXRCt60BWFFoYSKUOyNKveLtUmg2A69bwXvkkAoodfmnhcHo0sCpiGLfSkJpARSAh8KukchYpjB1AAAAABJRU5ErkJggg=="/>
+
+					<div class="twitter-container">
+							<p class="tweet" > <span class="user"> @testusername </span> this is a test tweet, lets hope it looks good </p>
+					</div>
+			</section>
+
+			<section class="section section2-background" id="section2">
+					<div class="section-title">
+						WHO WE ARE
+					</div>
+
+					<!-- <img src="images/multicolor-circle.png" class="big-circle"><div class="inner-circle">CitizenCity seeks to be Pittsburgh's only coworking space dedicated to providing
+						collaborative space, resources and community to our city's mission-driven professionals, organizations and companies.</div></img> -->
+						<img class="floorplan" src="images/floorplan.jpg"> </img>
+
+						<div class="story-text">CitizenCity seeks to be Pittsburgh's only coworking space dedicated to providing
+							<span class="red-highlight">collaborative space</span>, <span class="yellow-highlight">resources </span> &amp; <span class="blue-highlight"> community </span> to our city's mission-driven professionals.</div>
+
+ 						<!-- <p class="box-text">The city's diverse collection of nonprofit organizations, businesses and entrepreneurs
+							dedicated to social impact are eager to connect because they know that forming a more equitable and just world
+							requires collaboration.</p>
+					</div>
+
+
+					<div class="circle-container">
+						<div class="circle-red circle-sm circle-left"></div>
+						<div class="circle-red circle-sm circle-right"></div>
+						<div class="circle-red circle-lg circle-center"></div>
+
+						<div class="circle-yellow circle-sm circle-left"></div>
+						<div class="circle-yellow circle-sm circle-right"></div>
+						<div class="circle-yellow circle-lg circle-center"></div>
+
+						<div class="circle-blue circle-sm circle-left"></div>
+						<div class="circle-blue circle-sm circle-right"></div>
+						<div class="circle-blue circle-lg circle-center"></div>
+					</div>
+
+					<div class="box2">
+						<p class="box-text">However, our city lacks a shared space for socially conscious people-from across sectors-to work,
+							learn and socialize together.</p>
+					</div>
+
+
+					 <div class="circle-red circle-students"></div>
+					<div class="circle-blue circle-community"></div>
+					<div class="circle-yellow circle-proffesionals"></div>
+
+
+				<div class="inner-circle"> CitizenCity seeks to be Pittsburgh's largest coworking space exclusively
+					for the people, organizations and businesses dedicated to social impact. </div> -->
+
+		</section>
+
+
+		<section class="section section2-background" id="section4">
+			<div class="section-title">
+				OUR MODEL
+			</div>
+
+		<div id="triangle-wrapper">
+			<div id="triangle">
+				<img src="images/triangle-top.png" id="top-toggle" class="top"><div class="inner-triangle-text top-text" >Community <br /> Hub</div></img>
+				<br />
+				<img src="images/triangle-middle.png" id="middle-toggle" class="middle"><div class="inner-triangle-text middle-text" >Center for Education</div> </img>
+				<br />
+				<img src="images/triangle-bottom.png" id="bottom-toggle" class="bottom"><div class="inner-triangle-text bottom-text" >Coworking Space</div></img>
+			</div>
+		</div>
+
+<!-- Highlight text as triangles are clicked. professionsl -> red, students -> yelow, neighbor -> blue  -->
+<!-- Animations. Remove on mobile -->
+		<p class="model-text">We believe that a more equitable and just world requires bringing together a diverse community of people committed to social impact. Our space and programs seek to support an inclusive community of mission-driven
+		<span id="red-highlight"> professionals </span>, <span id="yellow-highlight"> students </span> and <span id="blue-highlight"> neighbors </span>.</p>
+		<div class="model-box">
+			<div class="box-text" id="model-box-text">
+			</div>
+		</div>
+
+
+		</section>
+
+		<section class="section section2-background" id="section3">
+			<div class="section-title title2">
+				OUR ROADMAP
+			</div>
+				<img src="images/roadmap-connect.png" class="roadmap"> </img>
+
+				<div class="roadmap-text"> In August 2015, we began having conversations and cultivating
+				relationships with the organizations and people that make up Pittsburgh's social impact
+				community. In 2016 we want to expand and grow our community of supporters. </div>
+
+				<img src="images/roadmap-share.png" class="roadmap"> </img>
+
+				<div class="roadmap-text"> Beginning January 2016, we will publish an online newsletter-
+				The Weekly Dose of Good, which will highlight the events, people and ideas shaping
+				Pittsburgh's social impact community. </div>
+
+				<img src="images/roadmap-educate.png" class="roadmap"> </img>
+
+				<div class="roadmap-text"> Beginning in the spring of 2016, we will offer pop-up events
+				around the pop-up workshops and events for Pittsburgh's social impact community.</div>
+
+				<img src="images/roadmap-house.png" class="roadmap"> </img>
+
+				<div class="roadmap-text"> Improving end distrusts may
+				instantly was household ap-
+				plauded incommode. </div>
+	</section>
+
+	<section class="section section1-background" id="section1">
+		<div class="section-title">
+			OUR BIG IDEA
+		</div>
+			<div class="box">
+				<p class="box-text">Pittsburgh is uniquely poised to be the American city that leads in
+					 cultivating the people, ideas and industries driving social change.</p>
+			</div>
+	</section>
+
+	</div>
+	</body>
+
+</html>
